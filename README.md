@@ -6,4 +6,4 @@
 
 A simple email template designed to report and share email campaign data.
 
-![campaign-report1](https://user-images.githubusercontent.com/6575035/69919576-669f3000-144c-11ea-99be-7b44b51104ce.png)
+![campaign-report1](https://user-images.githubusercontent.com/6575035/86976149-d5add700-c147-11ea-829c-bd064acf3730.png)
