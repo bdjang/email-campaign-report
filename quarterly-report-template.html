@@ -10,12 +10,6 @@ xmlns:o="urn:schemas-microsoft-com:office:office">
 <meta name="viewport" content="width=device-width" http-equiv="Content-Type">
 
 <style type="text/css">
-    
-    /** { border: 1px dotted red !important; }
-    td { border: 1px dotted red !important; }
-    img { border: 1px solid blue !important; }
-    br { border: 1px dashed limegreen !important; content: "A" !important; display: block !important; }
-    a { border: 1px solid #f441d0 !important; }*/
 
     /* CLIENT-SPECIFIC STYLES */
     body, table, td, a { -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
@@ -46,38 +40,41 @@ xmlns:o="urn:schemas-microsoft-com:office:office">
     .text-links:hover {
         text-decoration: none !important;
     }
-    .para-link:hover {
-        text-decoration: underline !important;
-    }
-    img:hover {
-        opacity: .8 !important;
-    }
 
-    .revP1:hover {
+    /* HOVER STYLES LINEAR GRADIENT */
+    .hoverGreen:hover {
         background: linear-gradient(to right, #10ed81 0%, #10ed81 100%) !important;
     }
-    .revP2:hover {
+    .hoverGrey:hover {
         background: linear-gradient(to right, #e2e6ef 0%, #e2e6ef 100%) !important;
     }
-    .revP3:hover {
-        background: linear-gradient(to right, #ff4251 0%, #ff4251 100%) !important;
-    }
-    .revP1_uk:hover {
-        background: linear-gradient(to right, #f2f456 0%, #f2f456 100%) !important;
-    }
-    .revP2_uk:hover {
+    .hoverBlue:hover {
         background: linear-gradient(to right, #5a9cff 0%, #5a9cff 100%) !important;
     }
-    .revP3_uk:hover {
+    .hoverRed:hover {
+        background: linear-gradient(to right, #ff4251 0%, #ff4251 100%) !important;
+    }
+    .hoverYellow:hover {
+        background: linear-gradient(to right, #f2f456 0%, #f2f456 100%) !important;
+    }
+    .hoverPurple:hover {
         background: linear-gradient(to right, #cd00cd 0%, #cd00cd 100%) !important;
     }
 
     /* Table hover styles */
     .row1:hover ~ td, .row1:hover, .row2:hover ~ td, .row2:hover, .row3:hover ~ td, .row3:hover, .row4:hover ~ td, .row4:hover, .row5:hover ~ td, .row5:hover, .row6:hover ~ td, .row6:hover, .row1 ~ td:hover, .row2 ~ td:hover, .row3 ~ td:hover, .row4 ~ td:hover, .row5 ~ td:hover, .row6 ~ td:hover {
-        background-color: #FFCAC7 !important;
+        background-color: #ffcac7 !important;
     }
     .row7:hover ~ td, .row7:hover, .row8:hover ~ td, .row8:hover, .row9:hover ~ td, .row9:hover, .row10:hover ~ td, .row10:hover, .row11:hover ~ td, .row11:hover, .row12:hover ~ td, .row12:hover, .row7 ~ td:hover, .row8 ~ td:hover, .row9 ~ td:hover, .row10 ~ td:hover, .row11 ~ td:hover, .row12 ~ td:hover {
-        background-color: #54da86 !important;
+        background-color: #95c4ff !important;
+    }
+
+    /* VERTICAL DATA BAR HOVER STATES */
+    .bar-color:hover {
+        background: linear-gradient(to right, #5a9cff 0%, #5a9cff 100%) !important;
+    }
+    .bar-labels:hover .top-label {
+        color: #fc0d1b !important;
     }
 
     /* MOBILE STYLES */
@@ -123,11 +120,11 @@ xmlns:o="urn:schemas-microsoft-com:office:office">
                             <td>
                                 <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
                                     <tr>
-                                        <td align="left" valign="top" bgcolor="#ffffff" style="background-color: #ffffff; border-bottom: 1px solid #ededed; margin: 0; padding: 0 20px 40px 20px; width: 100%;">
+                                        <td align="left" valign="top" bgcolor="#ffffff" style="background-color: #ffffff; border-bottom: 8px solid #000000; margin: 0; padding: 0 20px 40px 20px; width: 100%;">
 
                                             <div align="left" valign="top" style="margin: 0; padding: 0;">
-                                                <p style="color: #000000; font-weight: 300; font-size: 16px; font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif; line-height: 1.5em; margin: 0; padding: 20px 0 20px 0;">Lorem ipsum,</p>
-                                                <p style="color: #000000; font-weight: 300; font-size: 16px; font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif; line-height: 1.5em; margin: 0; padding: 0;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus eum, consectetur eos. Suscipit esse veniam velit, doloribus, error impedit architecto! Impedit, labore quaerat natus maxime fuga nihil error enim rerum.</p>
+                                                <p style="color: #000000; font-weight: 300; font-size: 16px; font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif; line-height: 1.5em; margin: 0; padding: 20px 0 20px 0;">Good morning,</p>
+                                                <p style="color: #000000; font-weight: 300; font-size: 16px; font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif; line-height: 1.5em; margin: 0; padding: 0;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta ipsam dolore suscipit dignissimos cum ipsum veritatis nemo adipisci amet laborum! Illo voluptatibus labore aspernatur, rem qui, voluptates mollitia placeat. Perspiciatis.<br /><br /><a href="{{viewInBrowserUrl}}" class="text-links">View in browser</a></p>
                                             </div>
 
                                         </td>
@@ -141,38 +138,157 @@ xmlns:o="urn:schemas-microsoft-com:office:office">
             <!-- end intro text -->
 
 
-            <!-- Q1 GRAPH -->
-            <tr>
-                <td align="center" valign="top" width="100%" bgcolor="#ffffff" style="background-color: #ffffff;">
-                    <table role="presentation" align="center" border="0" cellpadding="0" cellspacing="0" width="560">
-                        <tr>
-                            <td>
-                                <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
-                                    <tr>
-                                        <td align="left" valign="top" bgcolor="#ffffff" style="background-color: #ffffff; margin: 0; padding: 0 0 40px 0; width: 100%;">
+            <!-- Q2 GRAPH -->
+            <table role="presentation" align="center" border="0" cellpadding="0" cellspacing="0" width="600" height="400" class="bar-labels">
 
-                                            <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
-                                                <tr>
-                                                    <td align="center" valign="middle" width="100%" style="color: #000000; font-weight: 600; font-size: 26px; font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif; line-height: 1.5em; margin: 0; padding: 40px 0 40px 0;">Weekly Newsletter Q1</td>
-                                                </tr>
-                                            </table>
-                                            <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
-                                                <tr>
-                                                    <td align="center" valign="middle" bgcolor="#ffffff" style="background-color: #ffffff; padding: 0;">
-                                                        <img src="https://dummyimage.com/1000x787/f4f4f4/666" alt="Q1 Graph" width="500" height="auto" border="0" style="color: #0da1ed; display: block; font-size: 22px; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; line-height: 1.5em; width: 500px; height: auto;">
-                                                    </td>
-                                                </tr>
-                                            </table>
+                <!-- Bar graph title -->
+                <tr>
+                    <td align="center" colspan="10" style="font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 22px; font-weight: 600; line-height: 1.5em; margin: 0; padding: 40px 0 0 0;">Newsletter #1<br /><span style="color: #0d6eff; font-size: 14px;">&#8226; Avg. Total Email Opens</span>&nbsp;&nbsp;&nbsp;<span style="color: #fc0d1b; font-size: 14px;">&#8226; Avg. Email Open Rate</span></td>
+                </tr>
+                <!-- end bar graph title -->
+                <tr>
+                    <!-- Data bar #1 -->
+                    <td width="50" valign="bottom" align="center">
+                        <table role="presentation" border="0" cellspacing="0" cellpadding="0">
+                            <tr>
+                                <!-- Data bar label; Added white-space: nowrap to stop labels from splitting into two lines -->
+                                <!-- Changed element from <div> to <td> to accomodate Outlook clients; div was 'falling' into the data bar -->
+                                <td style="color: #feced1; font-family: 'Courier New'; font-weight: 600; font-size: 11px; line-height: 1.5em; margin: 0; max-width: 46px; padding: 0; text-align: center; white-space: nowrap;" class="top-label">14.46%</td>
+                            </tr>
+                            <tr>
+                                <!-- Define the height and width of the vertical data bar at the <td> cell level. This method gets better support from more email clients including Outlook DPI -->
+                                <td width="46" height="109" style="background: linear-gradient(to bottom, #5a9cff 0%, #0d6eff 100%); background-color: #5a9cff; color: #ffffff; font-family: 'Courier New'; font-weight: 600; font-size: 10px; line-height: 1.5em; margin: 0; max-width: 46px; padding: 0; text-align: center;" class="bar-color">154,223</td>
+                            </tr>
+                        </table>
+                    </td>
+                    <!-- end data bar #1 -->
+                    <!-- Data bar #2 -->
+                    <td width="50" valign="bottom" align="center">
+                        <table role="presentation" border="0" cellspacing="0" cellpadding="0">
+                            <tr>
+                                <td style="color: #feced1; font-family: 'Courier New'; font-weight: 600; font-size: 11px; line-height: 1.5em; margin: 0; max-width: 46px; padding: 0; text-align: center; white-space: nowrap;" class="top-label">16.61%</td>
+                            </tr>
+                            <tr>
+                                <td width="46" height="104" style="background: linear-gradient(to bottom, #5a9cff 0%, #0d6eff 100%); background-color: #5a9cff; color: #ffffff; font-family: 'Courier New'; font-weight: 600; font-size: 10px; line-height: 1.5em; margin: 0; max-width: 46px; padding: 0; text-align: center;" class="bar-color">144,158</td>
+                            </tr>
+                        </table>
+                    </td>
+                    <!-- end data bar #2 -->
+                    <!-- Data bar #3 -->
+                    <td width="50" valign="bottom" align="center">
+                        <table role="presentation" border="0" cellspacing="0" cellpadding="0">
+                            <tr>
+                                <td style="color: #feced1; font-family: 'Courier New'; font-weight: 600; font-size: 11px; line-height: 1.5em; margin: 0; max-width: 46px; padding: 0; text-align: center; white-space: nowrap;" class="top-label">20.28%</td>
+                            </tr>
+                            <tr>
+                                <td width="46" height="114" valign="middle" style="background: linear-gradient(to bottom, #5a9cff 0%, #0d6eff 100%); background-color: #5a9cff; color: #ffffff; font-family: 'Courier New'; font-weight: 600; font-size: 10px; line-height: 1.5em; margin: 0; max-width: 46px; padding: 0; text-align: center;" class="bar-color">162,001</td>
+                            </tr>
+                        </table>
+                    </td>
+                    <!-- end data bar #3 -->
+                    <!-- Data bar #4 -->
+                    <td width="50" valign="bottom" align="center">
+                        <table role="presentation" border="0" cellspacing="0" cellpadding="0">
+                            <tr>
+                                <td style="color: #feced1; font-family: 'Courier New'; font-weight: 600; font-size: 11px; line-height: 1.5em; margin: 0; max-width: 46px; padding: 0; text-align: center; white-space: nowrap;" class="top-label">20.74%</td>
+                            </tr>
+                            <tr>
+                                <td width="46" height="131" style="background: linear-gradient(to bottom, #5a9cff 0%, #0d6eff 100%); background-color: #5a9cff; color: #ffffff; font-family: 'Courier New'; font-weight: 600; font-size: 10px; line-height: 1.5em; margin: 0; max-width: 46px; padding: 0; text-align: center;" class="bar-color">198,199</td>
+                            </tr>
+                        </table>
+                    </td>
+                    <!-- end data bar #4 -->
+                    <!-- Data bar #5 -->
+                    <td width="50" valign="bottom" align="center">
+                        <table role="presentation" border="0" cellspacing="0" cellpadding="0">
+                            <tr>
+                                <td style="color: #feced1; font-family: 'Courier New'; font-weight: 600; font-size: 11px; line-height: 1.5em; margin: 0; max-width: 46px; padding: 0; text-align: center; white-space: nowrap;" class="top-label">22.61%</td>
+                            </tr>
+                            <tr>
+                                <td width="46" height="170" style="background: linear-gradient(to bottom, #5a9cff 0%, #0d6eff 100%); background-color: #5a9cff; color: #ffffff; font-family: 'Courier New'; font-weight: 600; font-size: 10px; line-height: 1.5em; margin: 0; max-width: 46px; padding: 0; text-align: center;" class="bar-color">252,912</td>
+                            </tr>
+                        </table>
+                    </td>
+                    <!-- end data bar #5 -->
+                    <!-- Data bar #6 -->
+                    <td width="50" valign="bottom" align="center">
+                        <table role="presentation" border="0" cellspacing="0" cellpadding="0">
+                            <tr>
+                                <td style="color: #feced1; font-family: 'Courier New'; font-weight: 600; font-size: 11px; line-height: 1.5em; margin: 0; max-width: 46px; padding: 0; text-align: center; white-space: nowrap;" class="top-label">25.20%</td>
+                            </tr>
+                            <tr>
+                                <td width="46" height="191" style="background: linear-gradient(to bottom, #5a9cff 0%, #0d6eff 100%); background-color: #5a9cff; color: #ffffff; font-family: 'Courier New'; font-weight: 600; font-size: 10px; line-height: 1.5em; margin: 0; max-width: 46px; padding: 0; text-align: center;" class="bar-color">286,615</td>
+                            </tr>
+                        </table>
+                    </td>
+                    <!-- end data bar #6 -->
+                    <!-- Data bar #7 -->
+                    <td width="50" valign="bottom" align="center">
+                        <table role="presentation" border="0" cellspacing="0" cellpadding="0">
+                            <tr>
+                                <td style="color: #feced1; font-family: 'Courier New'; font-weight: 600; font-size: 11px; line-height: 1.5em; margin: 0; max-width: 46px; padding: 0; text-align: center; white-space: nowrap;" class="top-label">21.21%</td>
+                            </tr>
+                            <tr>
+                                <td width="46" height="144" style="background: linear-gradient(to bottom, #5a9cff 0%, #0d6eff 100%); background-color: #5a9cff; color: #ffffff; font-family: 'Courier New'; font-weight: 600; font-size: 10px; line-height: 1.5em; margin: 0; max-width: 46px; padding: 0; text-align: center;" class="bar-color">210,197</td>
+                            </tr>
+                        </table>
+                    </td>
+                    <!-- end data bar #7 -->
+                    <!-- Data bar #8 -->
+                    <td width="50" valign="bottom" align="center">
+                        <table role="presentation" border="0" cellspacing="0" cellpadding="0">
+                            <tr>
+                                <td style="color: #feced1; font-family: 'Courier New'; font-weight: 600; font-size: 11px; line-height: 1.5em; margin: 0; max-width: 46px; padding: 0; text-align: center; white-space: nowrap;" class="top-label">25.63%</td>
+                            </tr>
+                            <tr>
+                                <td width="46" height="195" style="background: linear-gradient(to bottom, #5a9cff 0%, #0d6eff 100%); background-color: #5a9cff; color: #ffffff; font-family: 'Courier New'; font-weight: 600; font-size: 10px; line-height: 1.5em; margin: 0; max-width: 46px; padding: 0; text-align: center;" class="bar-color">291,096</td>
+                            </tr>
+                        </table>
+                    </td>
+                    <!-- end data bar #8 -->
+                    <!-- Data bar #9 -->
+                    <td width="50" valign="bottom" align="center">
+                        <table role="presentation" border="0" cellspacing="0" cellpadding="0">
+                            <tr>
+                                <td style="color: #feced1; font-family: 'Courier New'; font-weight: 600; font-size: 11px; line-height: 1.5em; margin: 0; max-width: 46px; padding: 0; text-align: center; white-space: nowrap;" class="top-label">28.51%</td>
+                            </tr>
+                            <tr>
+                                <td width="46" height="250" style="background: linear-gradient(to bottom, #5a9cff 0%, #0d6eff 100%); background-color: #5a9cff; color: #ffffff; font-family: 'Courier New'; font-weight: 600; font-size: 10px; line-height: 1.5em; margin: 0; max-width: 46px; padding: 0; text-align: center;" class="bar-color">380,716</td>
+                            </tr>
+                        </table>
+                    </td>
+                    <!-- end data bar #9 -->
+                    <!-- Data bar #10 -->
+                    <td width="50" valign="bottom" align="center">
+                        <table role="presentation" border="0" cellspacing="0" cellpadding="0">
+                            <tr>
+                                <td style="color: #feced1; font-family: 'Courier New'; font-weight: 600; font-size: 11px; line-height: 1.5em; margin: 0; max-width: 46px; padding: 0; text-align: center; white-space: nowrap;" class="top-label">27.92%</td>
+                            </tr>
+                            <tr>
+                                <td width="46" height="240" style="background: linear-gradient(to bottom, #5a9cff 0%, #0d6eff 100%); background-color: #5a9cff; color: #ffffff; font-family: 'Courier New'; font-weight: 600; font-size: 10px; line-height: 1.5em; margin: 0; max-width: 46px; padding: 0; text-align: center;" class="bar-color">365,548</td>
+                            </tr>
+                        </table>
+                    </td>
+                    <!-- end data bar #10 -->
+                </tr>
 
-                                        </td>
-                                    </tr>
-                                </table>
-                            </td>
-                        </tr>
-                    </table>
-                </td>
-            </tr>
-            <!-- end q1 graph -->
+                <!-- X-axis labels -->
+                <tr>
+                    <td height="10" style="font-family: 'Courier New'; font-size: 11px; font-weight: 600; line-height: 1.5em; margin: 0; padding: 0; text-align: center;">2018 Q1</td>
+                    <td height="10" style="font-family: 'Courier New'; font-size: 11px; font-weight: 600; line-height: 1.5em; margin: 0; padding: 0; text-align: center;">2018 Q2</td>
+                    <td height="10" style="font-family: 'Courier New'; font-size: 11px; font-weight: 600; line-height: 1.5em; margin: 0; padding: 0; text-align: center;">2018 Q3</td>
+                    <td height="10" style="font-family: 'Courier New'; font-size: 11px; font-weight: 600; line-height: 1.5em; margin: 0; padding: 0; text-align: center;">2018 Q4</td>
+                    <td height="10" style="font-family: 'Courier New'; font-size: 11px; font-weight: 600; line-height: 1.5em; margin: 0; padding: 0; text-align: center;">2019 Q1</td>
+                    <td height="10" style="font-family: 'Courier New'; font-size: 11px; font-weight: 600; line-height: 1.5em; margin: 0; padding: 0; text-align: center;">2019 Q2</td>
+                    <td height="10" style="font-family: 'Courier New'; font-size: 11px; font-weight: 600; line-height: 1.5em; margin: 0; padding: 0; text-align: center;">2019 Q3</td>
+                    <td height="10" style="font-family: 'Courier New'; font-size: 11px; font-weight: 600; line-height: 1.5em; margin: 0; padding: 0; text-align: center;">2019 Q4</td>
+                    <td height="10" style="font-family: 'Courier New'; font-size: 11px; font-weight: 600; line-height: 1.5em; margin: 0; padding: 0; text-align: center;">2020 Q1</td>
+                    <td height="10" style="font-family: 'Courier New'; font-size: 11px; font-weight: 600; line-height: 1.5em; margin: 0; padding: 0; text-align: center;">2020 Q2</td>
+                </tr>
+                <!-- end x-axis labels -->
+
+            </table>
+            <!-- end q2 graph -->
 
 
             <!-- NEWSLETTER STATS TABLE -->
@@ -183,35 +299,35 @@ xmlns:o="urn:schemas-microsoft-com:office:office">
                             <td>
                                 <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
                                     <tr>
-                                        <td align="left" valign="top" bgcolor="#ffffff" style="background-color: #ffffff; margin: 0; padding: 0 0 40px 0; width: 100%;">
+                                        <td align="left" valign="top" bgcolor="#ffffff" style="background-color: #ffffff; margin: 0; padding: 40px 0 40px 0; width: 100%;">
                                             <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
 
 
                                                 <!-- TABLE DATA -->
                                                 <tr>
-                                                    <td align="left" valign="middle" width="230px" style="background-color: #ffffff; border-bottom: 1px solid #828282; color: #000000; font-weight: 300; font-size: 14px; font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif; line-height: 1.5em; margin: 0; padding: 4px 0;">Year Q1</td>
+                                                    <td align="left" valign="middle" width="230px" style="background-color: #ffffff; border-bottom: 1px solid #828282; color: #000000; font-weight: 300; font-size: 14px; font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif; line-height: 1.5em; margin: 0; padding: 4px 0;">Year Q2</td>
                                                     <td align="right" valign="middle" width="110px" style="background-color: #ffffff; border-bottom: 1px solid #828282; color: #000000; font-weight: 300; font-size: 14px; font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif; line-height: 1.5em; margin: 0; padding: 4px 0;">Avg. List Size</td>
                                                     <td align="right" valign="middle" width="110px" style="background-color: #ffffff; border-bottom: 1px solid #828282; color: #000000; font-weight: 300; font-size: 14px; font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif; line-height: 1.5em; margin: 0; padding: 4px 0;">Avg. Clicks</td>
                                                     <td align="right" valign="middle" width="110px" style="background-color: #ffffff; border-bottom: 1px solid #828282; color: #000000; font-weight: 300; font-size: 14px; font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif; line-height: 1.5em; margin: 0; padding: 4px 0;">Avg. Bounces</td>
                                                 </tr>
                                                 <tr class="outlookRow1">
                                                     <!-- The empty links in the following table cells allows users in iOS to "touch" and highlight each cell -->
-                                                    <td class="row1" align="left" valign="middle" width="230px" style="border-bottom: 1px solid #cdcdcd; color: #000000; font-weight: 600; font-size: 14px; font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif; line-height: 1.5em; margin: 0; padding: 4px 0;"><a href="#" style="color: #000000; text-decoration: none;">2020 Q1</a></td>
-                                                    <td align="right" valign="middle" width="110px" style="border-bottom: 1px solid #cdcdcd; color: #000000; font-weight: 600; font-size: 14px; font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif; line-height: 1.5em; margin: 0; padding: 4px 0;"><a href="#" style="color: #000000; text-decoration: none;">+744</a></td>
-                                                    <td align="right" valign="middle" width="110px" style="border-bottom: 1px solid #cdcdcd; color: #000000; font-weight: 600; font-size: 14px; font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif; line-height: 1.5em; margin: 0; padding: 4px 0;"><a href="#" style="color: #000000; text-decoration: none;">2,484</a></td>
-                                                    <td align="right" valign="middle" width="110px" style="border-bottom: 1px solid #cdcdcd; color: #000000; font-weight: 600; font-size: 14px; font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif; line-height: 1.5em; margin: 0; padding: 4px 0;"><a href="#" style="color: #000000; text-decoration: none;">2,484</a></td>
+                                                    <td class="row1" align="left" valign="middle" width="230px" style="border-bottom: 1px solid #cdcdcd; color: #000000; font-weight: 600; font-size: 14px; font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif; line-height: 1.5em; margin: 0; padding: 4px 0;"><a href="#" style="color: #000000; text-decoration: none;">2020 Q2</a></td>
+                                                    <td align="right" valign="middle" width="110px" style="border-bottom: 1px solid #cdcdcd; color: #000000; font-weight: 600; font-size: 14px; font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif; line-height: 1.5em; margin: 0; padding: 4px 0;"><a href="#" style="color: #000000; text-decoration: none;">123,456</a></td>
+                                                    <td align="right" valign="middle" width="110px" style="border-bottom: 1px solid #cdcdcd; color: #000000; font-weight: 600; font-size: 14px; font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif; line-height: 1.5em; margin: 0; padding: 4px 0;"><a href="#" style="color: #000000; text-decoration: none;">12,345</a></td>
+                                                    <td align="right" valign="middle" width="110px" style="border-bottom: 1px solid #cdcdcd; color: #000000; font-weight: 600; font-size: 14px; font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif; line-height: 1.5em; margin: 0; padding: 4px 0;"><a href="#" style="color: #000000; text-decoration: none;">123</a></td>
                                                 </tr>
                                                 <tr class="outlookRow2">
-                                                    <td class="row2" align="left" valign="middle" width="230px" style="border-bottom: 1px solid #cdcdcd; color: #000000; font-weight: 600; font-size: 14px; font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif; line-height: 1.5em; margin: 0; padding: 4px 0;"><a href="#" style="color: #000000; text-decoration: none;">2019 Q1</a></td>
+                                                    <td class="row2" align="left" valign="middle" width="230px" style="border-bottom: 1px solid #cdcdcd; color: #000000; font-weight: 600; font-size: 14px; font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif; line-height: 1.5em; margin: 0; padding: 4px 0;"><a href="#" style="color: #000000; text-decoration: none;">2019 Q2</a></td>
                                                     <td align="right" valign="middle" width="110px" style="border-bottom: 1px solid #cdcdcd; color: #000000; font-weight: 600; font-size: 14px; font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif; line-height: 1.5em; margin: 0; padding: 4px 0;"><a href="#" style="color: #000000; text-decoration: none;">123,456</a></td>
-                                                    <td align="right" valign="middle" width="110px" style="border-bottom: 1px solid #cdcdcd; color: #000000; font-weight: 600; font-size: 14px; font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif; line-height: 1.5em; margin: 0; padding: 4px 0;"><a href="#" style="color: #000000; text-decoration: none;">7,890</a></td>
-                                                    <td align="right" valign="middle" width="110px" style="border-bottom: 1px solid #cdcdcd; color: #000000; font-weight: 600; font-size: 14px; font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif; line-height: 1.5em; margin: 0; padding: 4px 0;"><a href="#" style="color: #000000; text-decoration: none;">7,890</a></td>
+                                                    <td align="right" valign="middle" width="110px" style="border-bottom: 1px solid #cdcdcd; color: #000000; font-weight: 600; font-size: 14px; font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif; line-height: 1.5em; margin: 0; padding: 4px 0;"><a href="#" style="color: #000000; text-decoration: none;">12,345</a></td>
+                                                    <td align="right" valign="middle" width="110px" style="border-bottom: 1px solid #cdcdcd; color: #000000; font-weight: 600; font-size: 14px; font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif; line-height: 1.5em; margin: 0; padding: 4px 0;"><a href="#" style="color: #000000; text-decoration: none;">1,234</a></td>
                                                 </tr>
                                                 <tr class="outlookRow3">
-                                                    <td class="row3" align="left" valign="middle" width="230px" style="color: #000000; font-weight: 600; font-size: 14px; font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif; line-height: 1.5em; margin: 0; padding: 4px 0;"><a href="#" style="color: #000000; text-decoration: none;">2018 Q1</a></td>
+                                                    <td class="row3" align="left" valign="middle" width="230px" style="color: #000000; font-weight: 600; font-size: 14px; font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif; line-height: 1.5em; margin: 0; padding: 4px 0;"><a href="#" style="color: #000000; text-decoration: none;">2018 Q2</a></td>
+                                                    <td align="right" valign="middle" width="110px" style="color: #000000; font-weight: 600; font-size: 14px; font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif; line-height: 1.5em; margin: 0; padding: 4px 0;"><a href="#" style="color: #000000; text-decoration: none;">123,456</a></td>
                                                     <td align="right" valign="middle" width="110px" style="color: #000000; font-weight: 600; font-size: 14px; font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif; line-height: 1.5em; margin: 0; padding: 4px 0;"><a href="#" style="color: #000000; text-decoration: none;">1,234</a></td>
-                                                    <td align="right" valign="middle" width="110px" style="color: #000000; font-weight: 600; font-size: 14px; font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif; line-height: 1.5em; margin: 0; padding: 4px 0;"><a href="#" style="color: #000000; text-decoration: none;">5,678</a></td>
-                                                    <td align="right" valign="middle" width="110px" style="color: #000000; font-weight: 600; font-size: 14px; font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif; line-height: 1.5em; margin: 0; padding: 4px 0;"><a href="#" style="color: #000000; text-decoration: none;">5,678</a></td>
+                                                    <td align="right" valign="middle" width="110px" style="color: #000000; font-weight: 600; font-size: 14px; font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif; line-height: 1.5em; margin: 0; padding: 4px 0;"><a href="#" style="color: #000000; text-decoration: none;">1,234</a></td>
                                                 </tr>
                                                 <!-- end table data -->
 
@@ -228,7 +344,7 @@ xmlns:o="urn:schemas-microsoft-com:office:office">
             <!-- end newsletter stats table -->
 
 
-            <!-- Q1 STATS SUMMARY -->
+            <!-- Q2 STATS SUMMARY -->
             <tr>
                 <td align="center" valign="top" width="100%" bgcolor="#ffffff" style="background-color: #ffffff; border-bottom: 1px solid #ededed; padding: 0 0 40px 0;">
                     <table role="presentation" align="center" border="0" cellpadding="0" cellspacing="0" width="600">
@@ -243,10 +359,10 @@ xmlns:o="urn:schemas-microsoft-com:office:office">
                                                     <td align="left" valign="middle" width="100%" style="color: #000000; font-weight: 600; font-size: 16px; font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif; line-height: 1.5em; margin: 0; padding: 0 0 20px 0;">Email KPIs Summary:</td>
                                                 </tr>
                                                 <tr>
-                                                    <td align="left" valign="middle" width="100%" style="color: #000000; font-weight: 400; font-size: 16px; font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif; line-height: 1.5em; margin: 0; padding: 0 0 20px 0;">&#8226; Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic sint fugit repudiandae explicabo voluptates molestiae, consequatur incidunt dolor architecto! Rerum repudiandae, ex. Neque nostrum quae sed enim velit harum saepe?</td>
+                                                    <td align="left" valign="middle" width="100%" style="color: #000000; font-weight: 400; font-size: 16px; font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif; line-height: 1.5em; margin: 0; padding: 0 0 20px 0;">&#8226; Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit inventore magni porro, ex adipisci veniam aliquam. Sit quam deserunt, voluptas expedita veritatis iste a repellendus ad corporis nobis dolore voluptatum!</td>
                                                 </tr>
                                                 <tr>
-                                                    <td align="left" valign="middle" width="100%" style="color: #000000; font-weight: 400; font-size: 16px; font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif; line-height: 1.5em; margin: 0; padding: 0;">&#8226; Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab, perspiciatis amet sapiente pariatur magni a aspernatur ipsa recusandae, molestiae sunt itaque cupiditate deserunt illo modi, dignissimos. Id qui, cumque animi.</td>
+                                                    <td align="left" valign="middle" width="100%" style="color: #000000; font-weight: 400; font-size: 16px; font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif; line-height: 1.5em; margin: 0; padding: 0;">&#8226; Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio earum ad asperiores officia aperiam nemo quo dolor iusto, quidem in. Iure enim cumque fugiat aliquam sapiente in sed, modi placeat.</td>
                                                 </tr>
 
                                             </table>
@@ -258,7 +374,7 @@ xmlns:o="urn:schemas-microsoft-com:office:office">
                     </table>
                 </td>
             </tr>
-            <!-- end q1 stats text -->
+            <!-- end q2 stats text -->
             
 
             <!-- REVENUE SUMMARY -->
@@ -267,24 +383,23 @@ xmlns:o="urn:schemas-microsoft-com:office:office">
                     <table role="presentation" align="center" border="0" cellpadding="0" cellspacing="0" width="600">
 
                         <tr>
-                            <td align="left" style="padding: 40px 0 0 20px;"><span style="color: #101119; font-size: 14px; font-family: courier, courier new, georgia, times, times new roman; font-weight: 600; line-height: 1.5em;">Q1 Total Revenue</span></td>
+                            <td align="left" style="padding: 40px 0 0 20px;"><span style="color: #101119; font-size: 14px; font-family: courier, courier new, georgia, times, times new roman; font-weight: 600; line-height: 1.5em;">Newsletter Total Revenue</span></td>
                         </tr>
 
-                        <!-- 2020 Q1 -->
+                        <!-- 2020 Q2 -->
                         <tr>
                             <td align="left" colspan="3" style="padding: 2px 20px 0 20px;">
-                                <!-- The length of the data bar should be equal to the width of this table below -->
-                                <table width="461" border="0" cellspacing="0" cellpadding="0">
+                                <table role="presentation" width="470" border="0" cellspacing="0" cellpadding="0">
                                     <tr>
                                         <!-- You need to add the width and height inline in the table element for Outlook DPI clients. This makes the data label text align all the way right -->
                                         <!--[if mso]>
-                                        <v:shape coordorigin="0 0" coordsize="200 200" style="top:1;left:1;width:461;height:31" path="m 1,1 l 1,200, 200,200, 200,1 x e">
+                                        <v:shape coordorigin="0 0" coordsize="200 200" style="top:1;left:1;width:470;height:34" path="m 1,1 l 1,200, 200,200, 200,1 x e">
                                             <v:stroke opacity="0" />
                                             <v:fill type="gradient" color="#0dbd67" color2="#10ed81" angle="90" />
-                                            <table width="461" border="0" cellspacing="0" cellpadding="0" style="width: 493px; height: 31px;">
+                                            <table width="470" border="0" cellspacing="0" cellpadding="0" style="width: 470px; height: 34px;">
                                                 <tr>
-                                                    <td align="left" style="color: #000000; font-weight: 400; font-size: 14px; font-family: courier, courier new, georgia, times, times new roman; line-height: 18px; margin: 0; padding: 0;">2018</td>
-                                                    <td align="right" style="color: #000000; font-weight: 400; font-size: 14px; font-family: courier, courier new, georgia, times, times new roman; line-height: 18px; margin: 0; padding: 0;">$81,165.58</td>
+                                                    <td align="left" style="color: #000000; font-weight: 400; font-size: 14px; font-family: courier, courier new, georgia, times, times new roman; line-height: 18px; margin: 0; padding: 0;">2018 Q2</td>
+                                                    <td align="right" style="r: #000000; font-weight: 400; font-size: 14px; font-family: courier, courier new, georgia, times, times new roman; line-height: 18px; margin: 0; padding: 0;">$55,173.92&nbsp;</td>
                                                 </tr>
                                             </table>
                                         </v:shape>
@@ -292,28 +407,28 @@ xmlns:o="urn:schemas-microsoft-com:office:office">
 
                                         <!--[if !mso]>
                                         <!-->
-                                        <td class="revP1" width="40" align="left" style="background-color: #10ed81; color: #000000; font-weight: 400; font-size: 14px; font-family: courier, courier new, georgia, times, times new roman; line-height: 1.5em; margin: 0; padding: 0;" height="31">&nbsp;2020</td>
-                                        <td class="revP1" width="421" align="right" style="background: linear-gradient(to right, #10ed81 0%, #0dbd67 100%); background-color: #10ed81; color: #000000; font-weight: 400; font-size: 14px; font-family: courier, courier new, georgia, times, times new roman; line-height: 1.5em; margin: 0; padding: 0;" height="31">$81,165.58&nbsp;</td>
+                                        <td class="hoverGreen" width="100" align="left" style="background-color: #10ed81; color: #000000; font-weight: 400; font-size: 14px; font-family: courier, courier new, georgia, times, times new roman; line-height: 1.5em; margin: 0; padding: 0;" height="34">&nbsp;2020 Q2</td>
+                                        <td class="hoverGreen" width="370" align="right" style="background: linear-gradient(to right, #10ed81 0%, #0dbd67 100%); background-color: #10ed81; color: #000000; font-weight: 400; font-size: 14px; font-family: courier, courier new, georgia, times, times new roman; line-height: 1.5em; margin: 0; padding: 0;" height="34">$55,173.92&nbsp;</td>
                                         <!--<![endif]-->
                                     </tr>
                                 </table>
                             </td>
                         </tr>
-                        <!-- end 2020 q1 -->
+                        <!-- end 2020 q2 -->
 
-                        <!-- 2019 Q1 -->
+                        <!-- 2019 Q2 -->
                         <tr>
                             <td align="left" colspan="3" style="padding: 2px 20px 0 20px;">
-                                <table width="560" border="0" cellspacing="0" cellpadding="0">
+                                <table role="presentation" width="560" border="0" cellspacing="0" cellpadding="0">
                                     <tr>
                                         <!--[if mso]>
-                                        <v:shape coordorigin="0 0" coordsize="200 200" style="top:1;left:1;width:560;height:31" path="m 1,1 l 1,200, 200,200, 200,1 x e">
+                                        <v:shape coordorigin="0 0" coordsize="200 200" style="top:1;left:1;width:560;height:34" path="m 1,1 l 1,200, 200,200, 200,1 x e">
                                             <v:stroke opacity="0" />
                                             <v:fill type="gradient" color="#c5cedf" color2="#e2e6ef" angle="90" />
-                                            <table width="560" border="0" cellspacing="0" cellpadding="0" style="width: 560px; height: 31px;">
+                                            <table width="560" border="0" cellspacing="0" cellpadding="0" style="width: 560px; height: 34px;">
                                                 <tr>
-                                                    <td align="left" style="color: #000000; font-weight: 400; font-size: 14px; font-family: courier, courier new, georgia, times, times new roman; line-height: 18px; margin: 0; padding: 0;">2019</td>
-                                                    <td align="right" style="color: #000000; font-weight: 400; font-size: 14px; font-family: courier, courier new, georgia, times, times new roman; line-height: 18px; margin: 0; padding: 0;">$98,575.03</td>
+                                                    <td align="left" style="color: #000000; font-weight: 400; font-size: 14px; font-family: courier, courier new, georgia, times, times new roman; line-height: 18px; margin: 0; padding: 0;">2019 Q2</td>
+                                                    <td align="right" style="r: #000000; font-weight: 400; font-size: 14px; font-family: courier, courier new, georgia, times, times new roman; line-height: 18px; margin: 0; padding: 0;">$70,026.48&nbsp;</td>
                                                 </tr>
                                             </table>
                                         </v:shape>
@@ -321,28 +436,28 @@ xmlns:o="urn:schemas-microsoft-com:office:office">
 
                                         <!--[if !mso]>
                                         <!-->
-                                        <td class="revP2" width="40" align="left" style="background-color: #e2e6ef; color: #000000; font-weight: 400; font-size: 14px; font-family: courier, courier new, georgia, times, times new roman; line-height: 1.5em; margin: 0; padding: 0;" height="31">&nbsp;2019</td>
-                                        <td class="revP2" width="520" align="right" style="background: linear-gradient(to right, #e2e6ef 0%, #c5cedf 100%); background-color: #e2e6ef; color: #000000; font-weight: 400; font-size: 14px; font-family: courier, courier new, georgia, times, times new roman; line-height: 1.5em; margin: 0; padding: 0;" height="31">$98,575.03&nbsp;</td>
+                                        <td class="hoverGrey" width="100" align="left" style="background-color: #e2e6ef; color: #000000; font-weight: 400; font-size: 14px; font-family: courier, courier new, georgia, times, times new roman; line-height: 1.5em; margin: 0; padding: 0;" height="34">&nbsp;2019 Q2</td>
+                                        <td class="hoverGrey" width="460" align="right" style="background: linear-gradient(to right, #e2e6ef 0%, #c5cedf 100%); background-color: #e2e6ef; color: #000000; font-weight: 400; font-size: 14px; font-family: courier, courier new, georgia, times, times new roman; line-height: 1.5em; margin: 0; padding: 0;" height="34">$70,026.48&nbsp;</td>
                                         <!--<![endif]-->
                                     </tr>
                                 </table>
                             </td>
                         </tr>
-                        <!-- end 2019 q1 -->
+                        <!-- end 2019 q2 -->
 
-                        <!-- 2018 Q1 -->
+                        <!-- 2018 Q2 -->
                         <tr>
                             <td align="left" colspan="3" style="padding: 2px 20px 40px 20px;">
-                                <table width="326" border="0" cellspacing="0" cellpadding="0">
+                                <table role="presentation" width="241" border="0" cellspacing="0" cellpadding="0">
                                     <tr>
                                         <!--[if mso]>
-                                        <v:shape coordorigin="0 0" coordsize="200 200" style="top:1;left:1;width:326;height:31" path="m 1,1 l 1,200, 200,200, 200,1 x e">
+                                        <v:shape coordorigin="0 0" coordsize="200 200" style="top:1;left:1;width:241;height:34" path="m 1,1 l 1,200, 200,200, 200,1 x e">
                                             <v:stroke opacity="0" />
                                             <v:fill type="gradient" color="#c5cedf" color2="#e2e6ef" angle="90" />
-                                            <table width="326" border="0" cellspacing="0" cellpadding="0" style="width: 326px; height: 31px;">
+                                            <table width="241" border="0" cellspacing="0" cellpadding="0" style="width: 241px; height: 34px;">
                                                 <tr>
-                                                    <td align="left" style="color: #000000; font-weight: 400; font-size: 14px; font-family: courier, courier new, georgia, times, times new roman; line-height: 18px; margin: 0; padding: 0;">2018</td>
-                                                    <td align="right" style="color: #000000; font-weight: 400; font-size: 14px; font-family: courier, courier new, georgia, times, times new roman; line-height: 18px; margin: 0; padding: 0;">$57,387.00</td>
+                                                    <td align="left" style="color: #000000; font-weight: 400; font-size: 14px; font-family: courier, courier new, georgia, times, times new roman; line-height: 18px; margin: 0; padding: 0;">2018 Q2</td>
+                                                    <td align="right" style="r: #000000; font-weight: 400; font-size: 14px; font-family: courier, courier new, georgia, times, times new roman; line-height: 18px; margin: 0; padding: 0;">$28,910.00&nbsp;</td>
                                                 </tr>
                                             </table>
                                         </v:shape>
@@ -350,14 +465,14 @@ xmlns:o="urn:schemas-microsoft-com:office:office">
 
                                         <!--[if !mso]>
                                         <!-->
-                                        <td class="revP2" width="40" align="left" style="background-color: #e2e6ef; color: #000000; font-weight: 400; font-size: 14px; font-family: courier, courier new, georgia, times, times new roman; line-height: 1.5em; margin: 0; padding: 0;" height="31">&nbsp;2018</td>
-                                        <td class="revP2" width="286" align="right" style="background: linear-gradient(to right, #e2e6ef 0%, #c5cedf 100%); background-color: #e2e6ef; color: #000000; font-weight: 400; font-size: 14px; font-family: courier, courier new, georgia, times, times new roman; line-height: 1.5em; margin: 0; padding: 0;" height="31">$57,387.00&nbsp;</td>
+                                        <td class="hoverGrey" width="100" align="left" style="background-color: #e2e6ef; color: #000000; font-weight: 400; font-size: 14px; font-family: courier, courier new, georgia, times, times new roman; line-height: 1.5em; margin: 0; padding: 0;" height="34">&nbsp;2018 Q2</td>
+                                        <td class="hoverGrey" width="141" align="right" style="background: linear-gradient(to right, #e2e6ef 0%, #c5cedf 100%); background-color: #e2e6ef; color: #000000; font-weight: 400; font-size: 14px; font-family: courier, courier new, georgia, times, times new roman; line-height: 1.5em; margin: 0; padding: 0;" height="34">$28,910.00&nbsp;</td>
                                         <!--<![endif]-->
                                     </tr>
                                 </table>
                             </td>
                         </tr>
-                        <!-- end 2018 q1 -->
+                        <!-- end 2018 q2 -->
 
                     </table>
                 </td>
@@ -367,10 +482,10 @@ xmlns:o="urn:schemas-microsoft-com:office:office">
 
             <!-- 2019 REVENUE SUMMARY -->
             <tr>
-                <td align="center" valign="top" width="100%" bgcolor="#ffffff" style="background-color: #ffffff; border-bottom: 1px solid #ededed; padding: 0 0 80px 0;">
+                <td align="center" valign="top" width="100%" bgcolor="#ffffff" style="background-color: #ffffff;">
                     <table role="presentation" align="center" border="0" cellpadding="0" cellspacing="0" width="600">
                         <tr>
-                            <td>
+                            <td style="padding: 0 0 40px 0;">
                                 <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
                                     <tr>
                                         <td align="left" valign="top" bgcolor="#f3f5f5" style="background-color: #f3f5f5; margin: 0; padding: 40px; width: 100%;">
@@ -380,10 +495,7 @@ xmlns:o="urn:schemas-microsoft-com:office:office">
                                                     <td align="left" valign="middle" width="100%" style="color: #000000; font-weight: 600; font-size: 16px; font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif; line-height: 1.5em; margin: 0; padding: 0 0 20px 0;">Sales/Revenue Summary:</td>
                                                 </tr>
                                                 <tr>
-                                                    <td align="left" valign="middle" width="100%" style="color: #000000; font-weight: 400; font-size: 16px; font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif; line-height: 1.5em; margin: 0; padding: 0 0 20px 0;">&#8226; Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis aliquam totam, libero corporis ad ex nisi magnam blanditiis quo debitis vel, quos, minus illo, possimus. Corporis eligendi deserunt commodi repudiandae!</td>
-                                                </tr>
-                                                <tr>
-                                                    <td align="left" valign="middle" width="100%" style="color: #000000; font-weight: 400; font-size: 16px; font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif; line-height: 1.5em; margin: 0; padding: 0;">&#8226; Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae ex veniam blanditiis, alias distinctio temporibus nemo sed ut dolor, culpa, obcaecati ullam nam! Repellat delectus illum repellendus illo, officia saepe.</td>
+                                                    <td align="left" valign="middle" width="100%" style="color: #000000; font-weight: 400; font-size: 16px; font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif; line-height: 1.5em; margin: 0; padding: 0;">&#8226; Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque distinctio dolores id voluptatum aperiam, modi illo fugiat quod, et deserunt nihil inventore ipsum sunt provident, esse minima voluptate. Excepturi, nulla?</td>
                                                 </tr>
 
                                             </table>
@@ -397,43 +509,158 @@ xmlns:o="urn:schemas-microsoft-com:office:office">
             </tr>
             <!-- end 2019 revenue summary -->
 
-            
-            <!-- Q1 GRAPH -->
-            <tr>
-                <td align="center" valign="top" width="100%" bgcolor="#ffffff" style="background-color: #ffffff;">
-                    <table role="presentation" align="center" border="0" cellpadding="0" cellspacing="0" width="560">
-                        <tr>
-                            <td>
-                                <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
-                                    <tr>
-                                        <td align="left" valign="top" bgcolor="#ffffff" style="background-color: #ffffff; margin: 0; padding: 0 0 40px 0; width: 100%;">
 
-                                            <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
-                                                <tr>
-                                                    <td align="center" valign="middle" width="100%" colspan="4" style="color: #000000; font-weight: 600; font-size: 26px; font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif; line-height: 1.5em; margin: 0; padding: 40px 0 40px 0;">Weekly Newsletter Q1</td>
-                                                </tr>
-                                            </table>
+            <!-- Q2 GRAPH -->
+            <table role="presentation" align="center" border="0" cellpadding="0" cellspacing="0" width="600" height="400" style="border-top: 8px solid #000000;" class="bar-labels">
 
-                                            <!-- Q1 GRAPH -->
-                                            <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
-                                                <tr>
-                                                    <td align="center" valign="middle" bgcolor="#ffffff" style="background-color: #ffffff; padding: 0;">
-                                                        <img src="https://dummyimage.com/1000x787/f4f4f4/666" alt="Q1 Graph" width="500" height="auto" border="0" style="color: #0da1ed; display: block; font-size: 22px; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; line-height: 1.5em; width: 500px; height: auto;">
-                                                    </td>
-                                                </tr>
-                                            </table>
-                                            <!-- end q1 graph -->
+                <!-- Bar graph title -->
+                <tr>
+                    <td align="center" colspan="10" style="font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 24px; font-weight: 600; line-height: 1.5em; margin: 0; padding: 40px 0 0 0;">Newsletter #2<br /><span style="color: #0d6eff; font-size: 14px;">&#8226; Avg. Total Email Opens</span>&nbsp;&nbsp;&nbsp;<span style="color: #fc0d1b; font-size: 14px;">&#8226; Avg. Email Open Rate</span></td>
+                </tr>
+                <!-- end bar graph title -->
+                <tr>
+                    <!-- Data bar #1 -->
+                    <td width="50" valign="bottom" align="center">
+                        <table role="presentation" border="0" cellspacing="0" cellpadding="0">
+                            <tr>
+                                <!-- Data bar label; Added white-space: nowrap to stop labels from splitting into two lines -->
+                                <!-- Changed element from <div> to <td> to accomodate Outlook clients; div was 'falling' into the data bar -->
+                                <td style="color: #feced1; font-family: 'Courier New'; font-weight: 600; font-size: 11px; line-height: 1.5em; margin: 0; max-width: 46px; padding: 0; text-align: center; white-space: nowrap;" class="top-label">15.04%</td>
+                            </tr>
+                            <tr>
+                                <!-- Define the height and width of the vertical data bar at the <td> cell level. This method gets better support from more email clients including Outlook DPI -->
+                                <td width="46" height="37" style="background: linear-gradient(to bottom, #5a9cff 0%, #0d6eff 100%); background-color: #5a9cff; color: #ffffff; font-family: 'Courier New'; font-weight: 600; font-size: 10px; line-height: 1.5em; margin: 0; max-width: 46px; padding: 0; text-align: center;" class="bar-color">11,982</td>
+                            </tr>
+                        </table>
+                    </td>
+                    <!-- end data bar #1 -->
+                    <!-- Data bar #2 -->
+                    <td width="50" valign="bottom" align="center">
+                        <table role="presentation" border="0" cellspacing="0" cellpadding="0">
+                            <tr>
+                                <td style="color: #feced1; font-family: 'Courier New'; font-weight: 600; font-size: 11px; line-height: 1.5em; margin: 0; max-width: 46px; padding: 0; text-align: center; white-space: nowrap;" class="top-label">18.66%</td>
+                            </tr>
+                            <tr>
+                                <td width="46" height="72" style="background: linear-gradient(to bottom, #5a9cff 0%, #0d6eff 100%); background-color: #5a9cff; color: #ffffff; font-family: 'Courier New'; font-weight: 600; font-size: 10px; line-height: 1.5em; margin: 0; max-width: 46px; padding: 0; text-align: center;" class="bar-color">32,124</td>
+                            </tr>
+                        </table>
+                    </td>
+                    <!-- end data bar #2 -->
+                    <!-- Data bar #3 -->
+                    <td width="50" valign="bottom" align="center">
+                        <table role="presentation" border="0" cellspacing="0" cellpadding="0">
+                            <tr>
+                                <td style="color: #feced1; font-family: 'Courier New'; font-weight: 600; font-size: 11px; line-height: 1.5em; margin: 0; max-width: 46px; padding: 0; text-align: center; white-space: nowrap;" class="top-label">19.88%</td>
+                            </tr>
+                            <tr>
+                                <td width="46" height="128" valign="middle" style="background: linear-gradient(to bottom, #5a9cff 0%, #0d6eff 100%); background-color: #5a9cff; color: #ffffff; font-family: 'Courier New'; font-weight: 600; font-size: 10px; line-height: 1.5em; margin: 0; max-width: 46px; padding: 0; text-align: center;" class="bar-color">67,913</td>
+                            </tr>
+                        </table>
+                    </td>
+                    <!-- end data bar #3 -->
+                    <!-- Data bar #4 -->
+                    <td width="50" valign="bottom" align="center">
+                        <table role="presentation" border="0" cellspacing="0" cellpadding="0">
+                            <tr>
+                                <td style="color: #feced1; font-family: 'Courier New'; font-weight: 600; font-size: 11px; line-height: 1.5em; margin: 0; max-width: 46px; padding: 0; text-align: center; white-space: nowrap;" class="top-label">19.80%</td>
+                            </tr>
+                            <tr>
+                                <td width="46" height="158" style="background: linear-gradient(to bottom, #5a9cff 0%, #0d6eff 100%); background-color: #5a9cff; color: #ffffff; font-family: 'Courier New'; font-weight: 600; font-size: 10px; line-height: 1.5em; margin: 0; max-width: 46px; padding: 0; text-align: center;" class="bar-color">85,900</td>
+                            </tr>
+                        </table>
+                    </td>
+                    <!-- end data bar #4 -->
+                    <!-- Data bar #5 -->
+                    <td width="50" valign="bottom" align="center">
+                        <table role="presentation" border="0" cellspacing="0" cellpadding="0">
+                            <tr>
+                                <td style="color: #feced1; font-family: 'Courier New'; font-weight: 600; font-size: 11px; line-height: 1.5em; margin: 0; max-width: 46px; padding: 0; text-align: center; white-space: nowrap;" class="top-label">22.14%</td>
+                            </tr>
+                            <tr>
+                                <td width="46" height="127" style="background: linear-gradient(to bottom, #5a9cff 0%, #0d6eff 100%); background-color: #5a9cff; color: #ffffff; font-family: 'Courier New'; font-weight: 600; font-size: 10px; line-height: 1.5em; margin: 0; max-width: 46px; padding: 0; text-align: center;" class="bar-color">66,347</td>
+                            </tr>
+                        </table>
+                    </td>
+                    <!-- end data bar #5 -->
+                    <!-- Data bar #6 -->
+                    <td width="50" valign="bottom" align="center">
+                        <table role="presentation" border="0" cellspacing="0" cellpadding="0">
+                            <tr>
+                                <td style="color: #feced1; font-family: 'Courier New'; font-weight: 600; font-size: 11px; line-height: 1.5em; margin: 0; max-width: 46px; padding: 0; text-align: center; white-space: nowrap;" class="top-label">33.88%</td>
+                            </tr>
+                            <tr>
+                                <td width="46" height="81" style="background: linear-gradient(to bottom, #5a9cff 0%, #0d6eff 100%); background-color: #5a9cff; color: #ffffff; font-family: 'Courier New'; font-weight: 600; font-size: 10px; line-height: 1.5em; margin: 0; max-width: 46px; padding: 0; text-align: center;" class="bar-color">37,285</td>
+                            </tr>
+                        </table>
+                    </td>
+                    <!-- end data bar #6 -->
+                    <!-- Data bar #7 -->
+                    <td width="50" valign="bottom" align="center">
+                        <table role="presentation" border="0" cellspacing="0" cellpadding="0">
+                            <tr>
+                                <td style="color: #feced1; font-family: 'Courier New'; font-weight: 600; font-size: 11px; line-height: 1.5em; margin: 0; max-width: 46px; padding: 0; text-align: center; white-space: nowrap;" class="top-label">22.14%</td>
+                            </tr>
+                            <tr>
+                                <td width="46" height="127" style="background: linear-gradient(to bottom, #5a9cff 0%, #0d6eff 100%); background-color: #5a9cff; color: #ffffff; font-family: 'Courier New'; font-weight: 600; font-size: 10px; line-height: 1.5em; margin: 0; max-width: 46px; padding: 0; text-align: center;" class="bar-color">66,039</td>
+                            </tr>
+                        </table>
+                    </td>
+                    <!-- end data bar #7 -->
+                    <!-- Data bar #8 -->
+                    <td width="50" valign="bottom" align="center">
+                        <table role="presentation" border="0" cellspacing="0" cellpadding="0">
+                            <tr>
+                                <td style="color: #feced1; font-family: 'Courier New'; font-weight: 600; font-size: 11px; line-height: 1.5em; margin: 0; max-width: 46px; padding: 0; text-align: center; white-space: nowrap;" class="top-label">19.90%</td>
+                            </tr>
+                            <tr>
+                                <td width="46" height="138" style="background: linear-gradient(to bottom, #5a9cff 0%, #0d6eff 100%); background-color: #5a9cff; color: #ffffff; font-family: 'Courier New'; font-weight: 600; font-size: 10px; line-height: 1.5em; margin: 0; max-width: 46px; padding: 0; text-align: center;" class="bar-color">72,158</td>
+                            </tr>
+                        </table>
+                    </td>
+                    <!-- end data bar #8 -->
+                    <!-- Data bar #9 -->
+                    <td width="50" valign="bottom" align="center">
+                        <table role="presentation" border="0" cellspacing="0" cellpadding="0">
+                            <tr>
+                                <td style="color: #feced1; font-family: 'Courier New'; font-weight: 600; font-size: 11px; line-height: 1.5em; margin: 0; max-width: 46px; padding: 0; text-align: center; white-space: nowrap;" class="top-label">21.88%</td>
+                            </tr>
+                            <tr>
+                                <td width="46" height="177" style="background: linear-gradient(to bottom, #5a9cff 0%, #0d6eff 100%); background-color: #5a9cff; color: #ffffff; font-family: 'Courier New'; font-weight: 600; font-size: 10px; line-height: 1.5em; margin: 0; max-width: 46px; padding: 0; text-align: center;" class="bar-color">96,725</td>
+                            </tr>
+                        </table>
+                    </td>
+                    <!-- end data bar #9 -->
+                    <!-- Data bar #10 -->
+                    <td width="50" valign="bottom" align="center">
+                        <table role="presentation" border="0" cellspacing="0" cellpadding="0">
+                            <tr>
+                                <td style="color: #feced1; font-family: 'Courier New'; font-weight: 600; font-size: 11px; line-height: 1.5em; margin: 0; max-width: 46px; padding: 0; text-align: center; white-space: nowrap;" class="top-label">27.48%</td>
+                            </tr>
+                            <tr>
+                                <td width="46" height="250" style="background: linear-gradient(to bottom, #5a9cff 0%, #0d6eff 100%); background-color: #5a9cff; color: #ffffff; font-family: 'Courier New'; font-weight: 600; font-size: 10px; line-height: 1.5em; margin: 0; max-width: 46px; padding: 0; text-align: center;" class="bar-color">131,001</td>
+                            </tr>
+                        </table>
+                    </td>
+                    <!-- end data bar #10 -->
+                </tr>
 
+                <!-- X-axis labels -->
+                <tr>
+                    <td height="10" style="font-family: 'Courier New'; font-size: 11px; font-weight: 600; line-height: 1.5em; margin: 0; padding: 0; text-align: center;">2018 Q1</td>
+                    <td height="10" style="font-family: 'Courier New'; font-size: 11px; font-weight: 600; line-height: 1.5em; margin: 0; padding: 0; text-align: center;">2018 Q2</td>
+                    <td height="10" style="font-family: 'Courier New'; font-size: 11px; font-weight: 600; line-height: 1.5em; margin: 0; padding: 0; text-align: center;">2018 Q3</td>
+                    <td height="10" style="font-family: 'Courier New'; font-size: 11px; font-weight: 600; line-height: 1.5em; margin: 0; padding: 0; text-align: center;">2018 Q4</td>
+                    <td height="10" style="font-family: 'Courier New'; font-size: 11px; font-weight: 600; line-height: 1.5em; margin: 0; padding: 0; text-align: center;">2019 Q1</td>
+                    <td height="10" style="font-family: 'Courier New'; font-size: 11px; font-weight: 600; line-height: 1.5em; margin: 0; padding: 0; text-align: center;">2019 Q2</td>
+                    <td height="10" style="font-family: 'Courier New'; font-size: 11px; font-weight: 600; line-height: 1.5em; margin: 0; padding: 0; text-align: center;">2019 Q3</td>
+                    <td height="10" style="font-family: 'Courier New'; font-size: 11px; font-weight: 600; line-height: 1.5em; margin: 0; padding: 0; text-align: center;">2019 Q4</td>
+                    <td height="10" style="font-family: 'Courier New'; font-size: 11px; font-weight: 600; line-height: 1.5em; margin: 0; padding: 0; text-align: center;">2020 Q1</td>
+                    <td height="10" style="font-family: 'Courier New'; font-size: 11px; font-weight: 600; line-height: 1.5em; margin: 0; padding: 0; text-align: center;">2020 Q2</td>
+                </tr>
+                <!-- end x-axis labels -->
 
-                                        </td>
-                                    </tr>
-                                </table>
-                            </td>
-                        </tr>
-                    </table>
-                </td>
-            </tr>
-            <!-- end q1 graph -->
+            </table>
+            <!-- end q2 graph -->
 
 
             <!-- NEWSLETTER STATS TABLE -->
@@ -444,35 +671,35 @@ xmlns:o="urn:schemas-microsoft-com:office:office">
                             <td>
                                 <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
                                     <tr>
-                                        <td align="left" valign="top" bgcolor="#ffffff" style="background-color: #ffffff; margin: 0; padding: 0 0 40px 0; width: 100%;">
+                                        <td align="left" valign="top" bgcolor="#ffffff" style="background-color: #ffffff; margin: 0; padding: 40px 0 40px 0; width: 100%;">
                                             <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
 
 
                                                 <!-- TABLE DATA -->
                                                 <tr>
-                                                    <td align="left" valign="middle" width="230px" style="background-color: #ffffff; border-bottom: 1px solid #828282; color: #000000; font-weight: 300; font-size: 14px; font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif; line-height: 1.5em; margin: 0; padding: 4px 0;">Year Q1</td>
+                                                    <td align="left" valign="middle" width="230px" style="background-color: #ffffff; border-bottom: 1px solid #828282; color: #000000; font-weight: 300; font-size: 14px; font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif; line-height: 1.5em; margin: 0; padding: 4px 0;">Year Q2</td>
                                                     <td align="right" valign="middle" width="110px" style="background-color: #ffffff; border-bottom: 1px solid #828282; color: #000000; font-weight: 300; font-size: 14px; font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif; line-height: 1.5em; margin: 0; padding: 4px 0;">Avg. List Size</td>
                                                     <td align="right" valign="middle" width="110px" style="background-color: #ffffff; border-bottom: 1px solid #828282; color: #000000; font-weight: 300; font-size: 14px; font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif; line-height: 1.5em; margin: 0; padding: 4px 0;">Avg. Clicks</td>
                                                     <td align="right" valign="middle" width="110px" style="background-color: #ffffff; border-bottom: 1px solid #828282; color: #000000; font-weight: 300; font-size: 14px; font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif; line-height: 1.5em; margin: 0; padding: 4px 0;">Avg. Bounces</td>
                                                 </tr>
                                                 <tr class="outlookRow1">
                                                     <!-- The empty links in the following table cells allows users in iOS to "touch" and highlight each cell -->
-                                                    <td class="row1" align="left" valign="middle" width="230px" style="border-bottom: 1px solid #cdcdcd; color: #000000; font-weight: 600; font-size: 14px; font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif; line-height: 1.5em; margin: 0; padding: 4px 0;"><a href="#" style="color: #000000; text-decoration: none;">2020 Q1</a></td>
-                                                    <td align="right" valign="middle" width="110px" style="border-bottom: 1px solid #cdcdcd; color: #000000; font-weight: 600; font-size: 14px; font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif; line-height: 1.5em; margin: 0; padding: 4px 0;"><a href="#" style="color: #000000; text-decoration: none;">+744</a></td>
-                                                    <td align="right" valign="middle" width="110px" style="border-bottom: 1px solid #cdcdcd; color: #000000; font-weight: 600; font-size: 14px; font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif; line-height: 1.5em; margin: 0; padding: 4px 0;"><a href="#" style="color: #000000; text-decoration: none;">2,484</a></td>
-                                                    <td align="right" valign="middle" width="110px" style="border-bottom: 1px solid #cdcdcd; color: #000000; font-weight: 600; font-size: 14px; font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif; line-height: 1.5em; margin: 0; padding: 4px 0;"><a href="#" style="color: #000000; text-decoration: none;">2,484</a></td>
+                                                    <td class="row7" align="left" valign="middle" width="230px" style="border-bottom: 1px solid #cdcdcd; color: #000000; font-weight: 600; font-size: 14px; font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif; line-height: 1.5em; margin: 0; padding: 4px 0;"><a href="#" style="color: #000000; text-decoration: none;">2020 Q2</a></td>
+                                                    <td align="right" valign="middle" width="110px" style="border-bottom: 1px solid #cdcdcd; color: #000000; font-weight: 600; font-size: 14px; font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif; line-height: 1.5em; margin: 0; padding: 4px 0;"><a href="#" style="color: #000000; text-decoration: none;">123,456</a></td>
+                                                    <td align="right" valign="middle" width="110px" style="border-bottom: 1px solid #cdcdcd; color: #000000; font-weight: 600; font-size: 14px; font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif; line-height: 1.5em; margin: 0; padding: 4px 0;"><a href="#" style="color: #000000; text-decoration: none;">1,234</a></td>
+                                                    <td align="right" valign="middle" width="110px" style="border-bottom: 1px solid #cdcdcd; color: #000000; font-weight: 600; font-size: 14px; font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif; line-height: 1.5em; margin: 0; padding: 4px 0;"><a href="#" style="color: #000000; text-decoration: none;">123</a></td>
                                                 </tr>
                                                 <tr class="outlookRow2">
-                                                    <td class="row2" align="left" valign="middle" width="230px" style="border-bottom: 1px solid #cdcdcd; color: #000000; font-weight: 600; font-size: 14px; font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif; line-height: 1.5em; margin: 0; padding: 4px 0;"><a href="#" style="color: #000000; text-decoration: none;">2019 Q1</a></td>
+                                                    <td class="row8" align="left" valign="middle" width="230px" style="border-bottom: 1px solid #cdcdcd; color: #000000; font-weight: 600; font-size: 14px; font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif; line-height: 1.5em; margin: 0; padding: 4px 0;"><a href="#" style="color: #000000; text-decoration: none;">2019 Q2</a></td>
                                                     <td align="right" valign="middle" width="110px" style="border-bottom: 1px solid #cdcdcd; color: #000000; font-weight: 600; font-size: 14px; font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif; line-height: 1.5em; margin: 0; padding: 4px 0;"><a href="#" style="color: #000000; text-decoration: none;">123,456</a></td>
-                                                    <td align="right" valign="middle" width="110px" style="border-bottom: 1px solid #cdcdcd; color: #000000; font-weight: 600; font-size: 14px; font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif; line-height: 1.5em; margin: 0; padding: 4px 0;"><a href="#" style="color: #000000; text-decoration: none;">7,890</a></td>
-                                                    <td align="right" valign="middle" width="110px" style="border-bottom: 1px solid #cdcdcd; color: #000000; font-weight: 600; font-size: 14px; font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif; line-height: 1.5em; margin: 0; padding: 4px 0;"><a href="#" style="color: #000000; text-decoration: none;">7,890</a></td>
+                                                    <td align="right" valign="middle" width="110px" style="border-bottom: 1px solid #cdcdcd; color: #000000; font-weight: 600; font-size: 14px; font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif; line-height: 1.5em; margin: 0; padding: 4px 0;"><a href="#" style="color: #000000; text-decoration: none;">1,234</a></td>
+                                                    <td align="right" valign="middle" width="110px" style="border-bottom: 1px solid #cdcdcd; color: #000000; font-weight: 600; font-size: 14px; font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif; line-height: 1.5em; margin: 0; padding: 4px 0;"><a href="#" style="color: #000000; text-decoration: none;">123</a></td>
                                                 </tr>
                                                 <tr class="outlookRow3">
-                                                    <td class="row3" align="left" valign="middle" width="230px" style="color: #000000; font-weight: 600; font-size: 14px; font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif; line-height: 1.5em; margin: 0; padding: 4px 0;"><a href="#" style="color: #000000; text-decoration: none;">2018 Q1</a></td>
+                                                    <td class="row9" align="left" valign="middle" width="230px" style="color: #000000; font-weight: 600; font-size: 14px; font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif; line-height: 1.5em; margin: 0; padding: 4px 0;"><a href="#" style="color: #000000; text-decoration: none;">2018 Q2</a></td>
+                                                    <td align="right" valign="middle" width="110px" style="color: #000000; font-weight: 600; font-size: 14px; font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif; line-height: 1.5em; margin: 0; padding: 4px 0;"><a href="#" style="color: #000000; text-decoration: none;">123,456</a></td>
                                                     <td align="right" valign="middle" width="110px" style="color: #000000; font-weight: 600; font-size: 14px; font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif; line-height: 1.5em; margin: 0; padding: 4px 0;"><a href="#" style="color: #000000; text-decoration: none;">1,234</a></td>
-                                                    <td align="right" valign="middle" width="110px" style="color: #000000; font-weight: 600; font-size: 14px; font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif; line-height: 1.5em; margin: 0; padding: 4px 0;"><a href="#" style="color: #000000; text-decoration: none;">5,678</a></td>
-                                                    <td align="right" valign="middle" width="110px" style="color: #000000; font-weight: 600; font-size: 14px; font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif; line-height: 1.5em; margin: 0; padding: 4px 0;"><a href="#" style="color: #000000; text-decoration: none;">5,678</a></td>
+                                                    <td align="right" valign="middle" width="110px" style="color: #000000; font-weight: 600; font-size: 14px; font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif; line-height: 1.5em; margin: 0; padding: 4px 0;"><a href="#" style="color: #000000; text-decoration: none;">123</a></td>
                                                 </tr>
                                                 <!-- end table data-->
 
@@ -489,7 +716,7 @@ xmlns:o="urn:schemas-microsoft-com:office:office">
             <!-- end newsletter stats table -->
 
 
-            <!-- Q1 STATS SUMMARY -->
+            <!-- Q2 STATS SUMMARY -->
             <tr>
                 <td align="center" valign="top" width="100%" bgcolor="#ffffff" style="background-color: #ffffff; border-bottom: 1px solid #ededed; padding: 0 0 40px 0;">
                     <table role="presentation" align="center" border="0" cellpadding="0" cellspacing="0" width="600">
@@ -504,10 +731,10 @@ xmlns:o="urn:schemas-microsoft-com:office:office">
                                                     <td align="left" valign="middle" width="100%" style="color: #000000; font-weight: 600; font-size: 16px; font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif; line-height: 1.5em; margin: 0; padding: 0 0 20px 0;">Email KPIs Summary:</td>
                                                 </tr>
                                                 <tr>
-                                                    <td align="left" valign="middle" width="100%" style="color: #000000; font-weight: 400; font-size: 16px; font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif; line-height: 1.5em; margin: 0; padding: 0 0 20px 0;">&#8226; Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi laboriosam nam aut commodi provident iste odio libero, quam earum quas qui. Architecto voluptas, velit voluptatum vel tempora delectus, magni qui?</td>
+                                                    <td align="left" valign="middle" width="100%" style="color: #000000; font-weight: 400; font-size: 16px; font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif; line-height: 1.5em; margin: 0; padding: 0 0 20px 0;">&#8226; Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus, ipsum molestiae provident aliquid, officiis magnam quisquam excepturi ex ipsa expedita similique. Iste, perferendis doloribus illo placeat quaerat! Vitae, omnis, aliquam!</td>
                                                 </tr>
                                                 <tr>
-                                                    <td align="left" valign="middle" width="100%" style="color: #000000; font-weight: 400; font-size: 16px; font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif; line-height: 1.5em; margin: 0; padding: 0;">&#8226; Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis distinctio molestias quas et sed id dolores, dicta non, sequi asperiores alias illum facere eligendi earum nam esse cum cumque neque!</td>
+                                                    <td align="left" valign="middle" width="100%" style="color: #000000; font-weight: 400; font-size: 16px; font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif; line-height: 1.5em; margin: 0; padding: 0;">&#8226; Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi, a, nam. Consequatur magni alias unde consectetur assumenda, veniam voluptate, rerum quae fugit aperiam, numquam officia, aspernatur a reprehenderit reiciendis nobis.</td>
                                                 </tr>
 
                                             </table>
@@ -519,7 +746,7 @@ xmlns:o="urn:schemas-microsoft-com:office:office">
                     </table>
                 </td>
             </tr>
-            <!-- end q1 stats summary -->
+            <!-- end q2 stats summary -->
             
 
             <!-- REVENUE SUMMARY -->
@@ -529,22 +756,22 @@ xmlns:o="urn:schemas-microsoft-com:office:office">
 
 
                         <tr>
-                            <td align="left" style="padding: 40px 0 0 20px;"><span style="color: #101119; font-size: 14px; font-family: courier, courier new, georgia, times, times new roman; font-weight: 600; line-height: 1.5em;">Q1 Total Revenue</span></td>
+                            <td align="left" style="padding: 40px 0 0 20px;"><span style="color: #101119; font-size: 14px; font-family: courier, courier new, georgia, times, times new roman; font-weight: 600; line-height: 1.5em;">Newsletter Total Revenue</span></td>
                         </tr>
 
-                        <!-- 2020 Q1 -->
+                        <!-- 2020 Q2 -->
                         <tr>
                             <td align="left" colspan="3" style="padding: 2px 20px 0 20px;">
-                                <table width="560" border="0" cellspacing="0" cellpadding="0">
+                                <table role="presentation" width="560" border="0" cellspacing="0" cellpadding="0">
                                     <tr>
                                         <!--[if mso]>
-                                        <v:shape coordorigin="0 0" coordsize="200 200" style="top:1;left:1;width:560;height:31" path="m 1,1 l 1,200, 200,200, 200,1 x e">
+                                        <v:shape coordorigin="0 0" coordsize="200 200" style="top:1;left:1;width:560;height:34" path="m 1,1 l 1,200, 200,200, 200,1 x e">
                                             <v:stroke opacity="0" />
                                             <v:fill type="gradient" color="#0d6eff" color2="#5a9cff" angle="90" />
-                                            <table width="560" border="0" cellspacing="0" cellpadding="0" style="width: 560px; height: 31px;">
+                                            <table width="560" border="0" cellspacing="0" cellpadding="0" style="width: 560px; height: 34px;">
                                                 <tr>
-                                                    <td align="left" style="color: #000000; font-weight: 400; font-size: 14px; font-family: courier, courier new, georgia, times, times new roman; line-height: 18px; margin: 0; padding: 0;">2018</td>
-                                                    <td align="right" style="color: #000000; font-weight: 400; font-size: 14px; font-family: courier, courier new, georgia, times, times new roman; line-height: 18px; margin: 0; padding: 0;">$10,886.39</td>
+                                                    <td align="left" style="color: #000000; font-weight: 400; font-size: 14px; font-family: courier, courier new, georgia, times, times new roman; line-height: 18px; margin: 0; padding: 0;">2018 Q2</td>
+                                                    <td align="right" style="r: #000000; font-weight: 400; font-size: 14px; font-family: courier, courier new, georgia, times, times new roman; line-height: 18px; margin: 0; padding: 0;">$19,935.77&nbsp;</td>
                                                 </tr>
                                             </table>
                                         </v:shape>
@@ -552,29 +779,28 @@ xmlns:o="urn:schemas-microsoft-com:office:office">
 
                                         <!--[if !mso]>
                                         <!-->
-                                        <td class="revP2_uk" width="40" align="left" style="background-color: #5a9cff; color: #000000; font-weight: 400; font-size: 14px; font-family: courier, courier new, georgia, times, times new roman; line-height: 1.5em; margin: 0; padding: 0 0 0 6px;" height="31">2020</td>
-                                        <td class="revP2_uk" width="520" align="right" style="background: linear-gradient(to right, #5a9cff 0%, #0d6eff 100%); background-color: #5a9cff; color: #ffffff; font-weight: 400; font-size: 14px; font-family: courier, courier new, georgia, times, times new roman; line-height: 1.5em; margin: 0; padding: 0 6px 0 0;" height="31">$10,886.39</td>
-                                        <!-- <td width="232" align="right" style="background-color: #ffffff; color: #000000; font-weight: 400; font-size: 14px; font-family: courier, courier new, georgia, times, times new roman; line-height: 1.5em; margin: 0; padding: 0;" height="31"></td> -->
+                                        <td class="hoverBlue" width="100" align="left" style="background-color: #5a9cff; color: #000000; font-weight: 400; font-size: 14px; font-family: courier, courier new, georgia, times, times new roman; line-height: 1.5em; margin: 0; padding: 0;" height="34">&nbsp;2020 Q2</td>
+                                        <td class="hoverBlue" width="460" align="right" style="background: linear-gradient(to right, #5a9cff 0%, #0d6eff 100%); background-color: #5a9cff; color: #ffffff; font-weight: 400; font-size: 14px; font-family: courier, courier new, georgia, times, times new roman; line-height: 1.5em; margin: 0; padding: 0;" height="34">$19,935.77&nbsp;</td>
                                         <!--<![endif]-->
                                     </tr>
                                 </table>
                             </td>
                         </tr>
-                        <!-- end 2020 q1 -->
+                        <!-- end 2020 q2 -->
 
-                        <!-- 2019 Q1 -->
+                        <!-- 2019 Q2 -->
                         <tr>
                             <td align="left" colspan="3" style="padding: 2px 20px 0 20px;">
-                                <table width="537" border="0" cellspacing="0" cellpadding="0">
+                                <table role="presentation" width="192" border="0" cellspacing="0" cellpadding="0">
                                     <tr>
                                         <!--[if mso]>
-                                        <v:shape coordorigin="0 0" coordsize="200 200" style="top:1;left:1;width:537;height:31" path="m 1,1 l 1,200, 200,200, 200,1 x e">
+                                        <v:shape coordorigin="0 0" coordsize="200 200" style="top:1;left:1;width:192;height:34" path="m 1,1 l 1,200, 200,200, 200,1 x e">
                                             <v:stroke opacity="0" />
                                             <v:fill type="gradient" color="#c5cedf" color2="#e2e6ef" angle="90" />
-                                            <table width="537" border="0" cellspacing="0" cellpadding="0" style="width: 537px; height: 31px;">
+                                            <table width="192" border="0" cellspacing="0" cellpadding="0" style="width: 192px; height: 34px;">
                                                 <tr>
-                                                    <td align="left" style="color: #000000; font-weight: 400; font-size: 14px; font-family: courier, courier new, georgia, times, times new roman; line-height: 18px; margin: 0; padding: 0;">2019</td>
-                                                    <td align="right" style="color: #000000; font-weight: 400; font-size: 14px; font-family: courier, courier new, georgia, times, times new roman; line-height: 18px; margin: 0; padding: 0;">$10,436.94</td>
+                                                    <td align="left" style="color: #000000; font-weight: 400; font-size: 14px; font-family: courier, courier new, georgia, times, times new roman; line-height: 18px; margin: 0; padding: 0;">2019 Q2</td>
+                                                    <td align="right" style="r: #000000; font-weight: 400; font-size: 14px; font-family: courier, courier new, georgia, times, times new roman; line-height: 18px; margin: 0; padding: 0;">$5,134.12&nbsp;</td>
                                                 </tr>
                                             </table>
                                         </v:shape>
@@ -582,29 +808,28 @@ xmlns:o="urn:schemas-microsoft-com:office:office">
 
                                         <!--[if !mso]>
                                         <!-->
-                                        <td class="revP2" width="40" align="left" style="background-color: #e2e6ef; color: #000000; font-weight: 400; font-size: 14px; font-family: courier, courier new, georgia, times, times new roman; line-height: 1.5em; margin: 0; padding: 0;" height="31">&nbsp;2019</td>
-                                        <td class="revP2" width="497" align="right" style="background: linear-gradient(to right, #e2e6ef 0%, #c5cedf 100%); background-color: #e2e6ef; color: #000000; font-weight: 400; font-size: 14px; font-family: courier, courier new, georgia, times, times new roman; line-height: 1.5em; margin: 0; padding: 0;" height="31">$10,436.94&nbsp;</td>
+                                        <td class="hoverGrey" width="100" align="left" style="background-color: #e2e6ef; color: #000000; font-weight: 400; font-size: 14px; font-family: courier, courier new, georgia, times, times new roman; line-height: 1.5em; margin: 0; padding: 0;" height="34">&nbsp;2019 Q2</td>
+                                        <td class="hoverGrey" width="92" align="right" style="background: linear-gradient(to right, #e2e6ef 0%, #c5cedf 100%); background-color: #e2e6ef; color: #000000; font-weight: 400; font-size: 14px; font-family: courier, courier new, georgia, times, times new roman; line-height: 1.5em; margin: 0; padding: 0;" height="34">$5,134.12&nbsp;</td>
                                         <!--<![endif]-->
                                     </tr>
                                 </table>
                             </td>
                         </tr>
-                        <!-- end 2019 q1 -->
+                        <!-- end 2019 q2 -->
 
-                        <!-- 2018 Q1 -->
+                        <!-- 2018 Q2 -->
                         <tr>
                             <td align="left" colspan="3" style="padding: 2px 20px 40px 20px;">
-                                <table width="560" border="0" cellspacing="0" cellpadding="0">
+                                <table role="presentation" width="560" border="0" cellspacing="0" cellpadding="0">
                                     <tr>
                                         <!--[if mso]>
-                                        <v:shape coordorigin="0 0" coordsize="200 200" style="top:1;left:1;width:120;height:31" path="m 1,1 l 1,200, 200,200, 200,1 x e">
+                                        <v:shape coordorigin="0 0" coordsize="200 200" style="top:1;left:1;width:122;height:34" path="m 1,1 l 1,200, 200,200, 200,1 x e">
                                             <v:stroke opacity="0" />
                                             <v:fill type="gradient" color="#c5cedf" color2="#e2e6ef" angle="90" />
-                                            <table width="120" border="0" cellspacing="0" cellpadding="0" style="width: 120px; height: 31px;">
+                                            <table width="122" border="0" cellspacing="0" cellpadding="0" style="width: 122px; height: 34px;">
                                                 <tr>
-                                                    <td align="left" style="color: #000000; font-weight: 400; font-size: 14px; font-family: courier, courier new, georgia, times, times new roman; line-height: 18px; margin: 0; padding: 0;">2018</td>
-                                                    <td align="right" style="color: #000000; font-weight: 400; font-size: 14px; font-family: courier, courier new, georgia, times, times new roman; line-height: 18px; margin: 0; padding: 0;"></td>
-                                                    <td align="left" style="background-color: #ffffff; color: #000000; font-weight: 400; font-size: 14px; font-family: courier, courier new, georgia, times, times new roman; line-height: 18px; margin: 0; padding: 0 0 0 6px;">$2,329.11</td>
+                                                    <td align="left" width="122" style="color: #000000; font-weight: 400; font-size: 14px; font-family: courier, courier new, georgia, times, times new roman; line-height: 18px; margin: 0; padding: 0;">2018 Q2</td>
+                                                    <td align="left" width="438" style="color: #000000; font-weight: 400; font-size: 14px; font-family: courier, courier new, georgia, times, times new roman; line-height: 18px; margin: 0; padding: 0;">&nbsp;$1,257.05</td>
                                                 </tr>
                                             </table>
                                         </v:shape>
@@ -612,27 +837,26 @@ xmlns:o="urn:schemas-microsoft-com:office:office">
 
                                         <!--[if !mso]>
                                         <!-->
-                                        <td class="revP2" width="40" align="left" style="background-color: #e2e6ef; color: #000000; font-weight: 400; font-size: 14px; font-family: courier, courier new, georgia, times, times new roman; line-height: 1.5em; margin: 0; padding: 0;" height="31">&nbsp;2018</td>
-                                        <td class="revP2" width="80" align="right" style="background: linear-gradient(to right, #e2e6ef 0%, #c5cedf 100%); background-color: #e2e6ef; color: #000000; font-weight: 400; font-size: 14px; font-family: courier, courier new, georgia, times, times new roman; line-height: 1.5em; margin: 0; padding: 0;" height="31"></td>
-                                        <td width="440" align="left" style="background-color: #ffffff; color: #000000; font-weight: 400; font-size: 14px; font-family: courier, courier new, georgia, times, times new roman; line-height: 1.5em; margin: 0; padding: 0;" height="31">&nbsp;$2,329.11</td>
+                                        <td class="hoverGrey" width="122" align="left" style="background-color: #e2e6ef; color: #000000; font-weight: 400; font-size: 14px; font-family: courier, courier new, georgia, times, times new roman; line-height: 1.5em; margin: 0; padding: 0;" height="34">&nbsp;2018 Q2</td>
+                                        <td width="auto" align="left" style="background-color: #ffffff; color: #000000; font-weight: 400; font-size: 14px; font-family: courier, courier new, georgia, times, times new roman; line-height: 1.5em; margin: 0; padding: 0;" height="34">&nbsp;$1,257.05</td>
                                         <!--<![endif]-->
                                     </tr>
                                 </table>
                             </td>
                         </tr>
-                        <!-- end 2018 q1 -->
+                        <!-- end 2018 q2 -->
+
                     </table>
                 </td>
             </tr>
             <!-- end revenue summary -->
 
-
             <!-- 2019 REVENUE SUMMARY -->
             <tr>
-                <td align="center" valign="top" width="100%" bgcolor="#ffffff" style="background-color: #ffffff; border-bottom: 1px solid #ededed; padding: 0 0 40px 0;">
+                <td align="center" valign="top" width="100%">
                     <table role="presentation" align="center" border="0" cellpadding="0" cellspacing="0" width="600">
                         <tr>
-                            <td>
+                            <td style="padding: 0 0 40px 0;">
                                 <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
                                     <tr>
                                         <td align="left" valign="top" bgcolor="#f3f5f5" style="background-color: #f3f5f5; margin: 0; padding: 40px; width: 100%;">
@@ -642,10 +866,10 @@ xmlns:o="urn:schemas-microsoft-com:office:office">
                                                     <td align="left" valign="middle" width="100%" style="color: #000000; font-weight: 600; font-size: 16px; font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif; line-height: 1.5em; margin: 0; padding: 0 0 20px 0;">Sales/Revenue Summary:</td>
                                                 </tr>
                                                 <tr>
-                                                    <td align="left" valign="middle" width="100%" style="color: #000000; font-weight: 400; font-size: 16px; font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif; line-height: 1.5em; margin: 0; padding: 0 0 20px 0;">&#8226; Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab, natus est tenetur consequuntur asperiores nihil ut commodi quidem, a vitae quisquam qui ipsam saepe, animi beatae ad pariatur. Tempore, fugit.</td>
+                                                    <td align="left" valign="middle" width="100%" style="color: #000000; font-weight: 400; font-size: 16px; font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif; line-height: 1.5em; margin: 0; padding: 0 0 20px 0;">&#8226; Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem natus ex totam doloremque assumenda ipsa, eveniet ut, adipisci magni consequatur deserunt ipsum illum, eius dicta expedita repellat, eaque eos officiis.</td>
                                                 </tr>
                                                 <tr>
-                                                    <td align="left" valign="middle" width="100%" style="color: #000000; font-weight: 400; font-size: 16px; font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif; line-height: 1.5em; margin: 0; padding: 0;">&#8226; Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet inventore iure quia dolorem illo dicta! Vero neque magnam consequatur suscipit nam, fugit. Dolorum qui iure deserunt? Debitis ullam, mollitia vitae.</td>
+                                                    <td align="left" valign="middle" width="100%" style="color: #000000; font-weight: 400; font-size: 16px; font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif; line-height: 1.5em; margin: 0; padding: 0;">&#8226; Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam accusamus necessitatibus quasi dolor molestias saepe nulla suscipit non minima voluptate dolorum perspiciatis, autem reiciendis quae, modi dolore quod molestiae. Eius!</td>
                                                 </tr>
 
                                             </table>
@@ -658,174 +882,6 @@ xmlns:o="urn:schemas-microsoft-com:office:office">
                 </td>
             </tr>
             <!-- end 2019 revenue summary -->
-            
-
-            <!-- 2019 PROMOS -->
-            <tr>
-                <td align="center" valign="top" width="100%" bgcolor="#ffffff" style="background-color: #ffffff;"><a href="#" name="a3" id="a3"></a>
-                    <table role="presentation" align="center" border="0" cellpadding="0" cellspacing="0" width="600">
-
-
-                        <!-- REVENUE BARS -->
-                        <tr>
-                            <td align="left" style="padding: 40px 0 0 20px;"><span style="color: #101119; font-size: 14px; font-family: courier, courier new, georgia, times, times new roman; font-weight: 600; line-height: 1.5em;">Comparing Promos (as of 01/01/20)</span></td>
-                        </tr>
-                        <tr>
-                            <td align="left" colspan="3" style="padding: 2px 20px 0 20px;">
-                                <table width="560" border="0" cellspacing="0" cellpadding="0">
-                                    <tr>
-                                        <!--[if mso]>
-                                        <v:shape coordorigin="0 0" coordsize="200 200" style="top:1;left:1;width:560;height:31" path="m 1,1 l 1,200, 200,200, 200,1 x e">
-                                            <v:stroke opacity="0" />
-                                            <v:fill type="gradient" color="#c5cedf" color2="#e2e6ef" angle="90" />
-                                            <table width="560" border="0" cellspacing="0" cellpadding="0" style="width: 560px; height: 31px;">
-                                                <tr>
-                                                    <td align="left" style="color: #000000; font-weight: 400; font-size: 14px; font-family: courier, courier new, georgia, times, times new roman; line-height: 18px; margin: 0; padding: 0;">US Promo</td>
-                                                    <td align="right" style="color: #000000; font-weight: 400; font-size: 14px; font-family: courier, courier new, georgia, times, times new roman; line-height: 18px; margin: 0; padding: 0;">$211,012.71</td>
-                                                </tr>
-                                            </table>
-                                        </v:shape>
-                                        <![endif]-->
-
-                                        <!--[if !mso]>
-                                        <!-->
-                                        <td class="revP2" width="80" align="left" style="background-color: #e2e6ef; color: #000000; font-weight: 400; font-size: 14px; font-family: courier, courier new, georgia, times, times new roman; line-height: 1.5em; margin: 0; padding: 0;" height="31">&nbsp;Promo #1</td>
-                                        <td class="revP2" width="480" align="right" style="background: linear-gradient(to right, #e2e6ef 0%, #c5cedf 100%); background-color: #e2e6ef; color: #000000; font-weight: 400; font-size: 14px; font-family: courier, courier new, georgia, times, times new roman; line-height: 1.5em; margin: 0; padding: 0;" height="31">$211,012.71&nbsp;</td>
-                                        <!--<![endif]-->
-                                    </tr>
-                                </table>
-                            </td>
-                        </tr>
-
-
-                        <!-- 1/3/19
-                        CSS "linear-gradient" does not work in Outlook.com, all MSO Outlook clients, and Yahoo! Mail.
-                        The fixes for each client are below:  -->
-
-                        <tr>
-                            <td align="left" colspan="3" style="padding: 2px 20px 0 20px;">
-                                <table width="419" border="0" cellspacing="0" cellpadding="0">
-                                    <tr>
-
-                                        <!-- For MSO Outlook clients, you need to use VML and "gradient". You also need to comment out the regular HTML data bars for these clients -->
-
-                                        <!--[if mso]>
-                                        <v:shape coordorigin="0 0" coordsize="200 200" style="top:1;left:1;width:419;height:31" path="m 1,1 l 1,200, 200,200, 200,1 x e">
-                                            <v:stroke opacity="0" />
-                                            <v:fill type="gradient" color="#0dbd67" color2="#10ed81" angle="90" />
-                                            <table width="419" border="0" cellspacing="0" cellpadding="0" style="width: 419px; height: 31px;">
-                                                <tr>
-                                                    <td align="left" style="color: #000000; font-weight: 400; font-size: 14px; font-family: courier, courier new, georgia, times, times new roman; line-height: 18px; margin: 0; padding: 0;">2019 NLs</td>
-                                                    <td align="right" style="color: #000000; font-weight: 400; font-size: 14px; font-family: courier, courier new, georgia, times, times new roman; line-height: 18px; margin: 0; padding: 0;">$157,712.61</td>
-                                                </tr>
-                                            </table>
-                                        </v:shape>
-                                        <![endif]-->
-
-                                        <!--[if !mso]>
-                                        <!-->
-                                        <td class="revP1" width="80" align="left" style="background-color: #10ed81; color: #000000; font-weight: 400; font-size: 14px; font-family: courier, courier new, georgia, times, times new roman; line-height: 1.5em; margin: 0; padding: 0;" height="31">&nbsp;Promo #2</td>
-
-                                        <!-- You cannot use any CSS gradient in both Yahoo! Mail and Outlook.com. As a fallback, add an additional "background-color: ___;" after the "background: linear-gradient();" - this will display a solid data bar line instead of a dissected data bar with two colors." -->
-
-                                        <td class="revP1" width="339" align="right" style="background: linear-gradient(to right, #10ed81 0%, #0dbd67 100%); background-color: #10ed81; color: #000000; font-weight: 400; font-size: 14px; font-family: courier, courier new, georgia, times, times new roman; line-height: 1.5em; margin: 0; padding: 0;" height="31">$157,712.61&nbsp;</td>
-                                        <!--<![endif]-->
-                                    </tr>
-                                </table>
-                            </td>
-                        </tr>
-                        <!-- end revenue bars -->
-
-
-                        <!-- REVENUE BARS -->
-                        <tr>
-                        </tr>
-                        <tr>
-                            <td align="left" colspan="3" style="padding: 2px 20px 0 20px;">
-                                <table width="274" border="0" cellspacing="0" cellpadding="0">
-                                    <tr>
-                                        <!--[if mso]>
-                                        <v:shape coordorigin="0 0" coordsize="200 200" style="top:1;left:1;width:274;height:31" path="m 1,1 l 1,200, 200,200, 200,1 x e">
-                                            <v:stroke opacity="0" />
-                                            <v:fill type="gradient" color="#c5cedf" color2="#e2e6ef" angle="90" />
-                                            <table width="274" border="0" cellspacing="0" cellpadding="0" style="width: 274px; height: 31px;">
-                                                <tr>
-                                                    <td align="left" style="color: #000000; font-weight: 400; font-size: 14px; font-family: courier, courier new, georgia, times, times new roman; line-height: 18px; margin: 0; padding: 0;">EU Promo</td>
-                                                    <td align="right" style="color: #000000; font-weight: 400; font-size: 14px; font-family: courier, courier new, georgia, times, times new roman; line-height: 18px; margin: 0; padding: 0;">$63,123.65</td>
-                                                </tr>
-                                            </table>
-                                        </v:shape>
-                                        <![endif]-->
-
-                                        <!--[if !mso]>
-                                        <!-->
-                                        <td class="revP2" width="80" align="left" style="background-color: #e2e6ef; color: #000000; font-weight: 400; font-size: 14px; font-family: courier, courier new, georgia, times, times new roman; line-height: 1.5em; margin: 0; padding: 0;" height="31">&nbsp;Promo #3</td>
-                                        <td class="revP2" width="194" align="right" style="background: linear-gradient(to right, #e2e6ef 0%, #c5cedf 100%); background-color: #e2e6ef; color: #000000; font-weight: 400; font-size: 14px; font-family: courier, courier new, georgia, times, times new roman; line-height: 1.5em; margin: 0; padding: 0;" height="31">$103,123.65&nbsp;</td>
-                                        <!--<![endif]-->
-                                    </tr>
-                                </table>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td align="left" colspan="3" style="padding: 2px 20px 0 20px;">
-                                <table width="560" border="0" cellspacing="0" cellpadding="0">
-                                    <tr>
-                                        <!--[if mso]>
-                                        <v:shape coordorigin="0 0" coordsize="200 200" style="top:1;left:1;width:53;height:31" path="m 1,1 l 1,200, 200,200, 200,1 x e">
-                                            <v:stroke opacity="0" />
-                                            <v:fill type="gradient" color="#c5cedf" color2="#e2e6ef" angle="90" />
-                                            <table width="53" border="0" cellspacing="0" cellpadding="0" style="width: 53px; height: 31px;">
-                                                <tr>
-                                                    <td align="left" style="color: #000000; font-weight: 400; font-size: 14px; font-family: courier, courier new, georgia, times, times new roman; line-height: 18px; margin: 0; padding: 0;">A+C</td>
-                                                    <td align="right" style="color: #000000; font-weight: 400; font-size: 14px; font-family: courier, courier new, georgia, times, times new roman; line-height: 18px; margin: 0; padding: 0;">$20,000.70</td>
-                                                </tr>
-                                            </table>
-                                        </v:shape>
-                                        <![endif]-->
-
-                                        <!--[if !mso]>
-                                        <!-->
-                                        <td class="revP2" width="53" align="left" style="background-color: #e2e6ef; color: #000000; font-weight: 400; font-size: 14px; font-family: courier, courier new, georgia, times, times new roman; line-height: 1.5em; margin: 0; padding: 0;" height="31">&nbsp;P #4</td>
-                                        <td width="507" align="left" style="background-color: #ffffff; color: #000000; font-weight: 400; font-size: 14px; font-family: courier, courier new, georgia, times, times new roman; line-height: 1.5em; margin: 0; padding: 0;" height="31">&nbsp;$20,000.70</td>
-                                        <!--<![endif]-->
-                                    </tr>
-                                </table>
-                            </td>
-                        </tr>
-                        <!-- end revenue bars -->
-                        <tr>
-                            <td align="left" colspan="3" style="padding: 2px 20px 60px 20px;">
-                                <table width="481" border="0" cellspacing="0" cellpadding="0">
-                                    <tr>
-                                        <!--[if mso]>
-                                        <v:shape coordorigin="0 0" coordsize="200 200" style="top:1;left:1;width:481;height:31" path="m 1,1 l 1,200, 200,200, 200,1 x e">
-                                            <v:stroke opacity="0" />
-                                            <v:fill type="gradient" color="#c5cedf" color2="#e2e6ef" angle="90" />
-                                            <table width="481" border="0" cellspacing="0" cellpadding="0" style="width: 481px; height: 31px;">
-                                                <tr>
-                                                    <td align="left" style="color: #000000; font-weight: 400; font-size: 14px; font-family: courier, courier new, georgia, times, times new roman; line-height: 18px; margin: 0; padding: 0;">2018 NLs</td>
-                                                    <td align="right" style="color: #000000; font-weight: 400; font-size: 14px; font-family: courier, courier new, georgia, times, times new roman; line-height: 18px; margin: 0; padding: 0;">$119,090.19</td>
-                                                </tr>
-                                            </table>
-                                        </v:shape>
-                                        <![endif]-->
-
-                                        <!--[if !mso]>
-                                        <!-->
-                                        <td class="revP2" width="80" align="left" style="background-color: #e2e6ef; color: #000000; font-weight: 400; font-size: 14px; font-family: courier, courier new, georgia, times, times new roman; line-height: 1.5em; margin: 0; padding: 0;" height="31">&nbsp;Promo #5</td>
-                                        <td class="revP2" width="401" align="right" style="background: linear-gradient(to right, #e2e6ef 0%, #c5cedf 100%); background-color: #e2e6ef; color: #000000; font-weight: 400; font-size: 14px; font-family: courier, courier new, georgia, times, times new roman; line-height: 1.5em; margin: 0; padding: 0;" height="31">$181,090.19&nbsp;</td>
-                                        <!--<![endif]-->
-                                    </tr>
-                                </table>
-                            </td>
-                        </tr>
-
-
-                    </table>
-                </td>
-            </tr>
-            <!-- end revenue summary -->
-
 
         </table>
     </body>
